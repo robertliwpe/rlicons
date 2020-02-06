@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0abd6790-e6a9-4c29-9253-225a971950ba" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="DrupalConfiguration">
+    <drupalPath />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JoomlaConfiguration">
+    <joomlaConfigPath />
+    <joomlaPath />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/wp-coding-standards/wpcs" />
+      <path value="$PROJECT_DIR$/vendor/phpcompatibility/php-compatibility" />
+      <path value="$PROJECT_DIR$/vendor/dealerdirect/phpcodesniffer-composer-installer" />
+      <path value="$PROJECT_DIR$/vendor/phpcompatibility/phpcompatibility-wp" />
+      <path value="$PROJECT_DIR$/vendor/phpcompatibility/phpcompatibility-paragonie" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/../../../../../Work/wpcached" />
+      <path value="$PROJECT_DIR$/../genesis" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1VDJrDSRBtSclomru7pev7LZBEq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.stylelint" value="$PROJECT_DIR$/node_modules/stylelint" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RunManager">
+    <configuration name="lint:js" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint:js" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.lint:js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0abd6790-e6a9-4c29-9253-225a971950ba" name="Default Changelist" comment="" />
+      <created>1576781928325</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576781928325</updated>
+      <workItem from="1576781929939" duration="2050000" />
+      <workItem from="1577096212554" duration="2963000" />
+      <workItem from="1577108909959" duration="251000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="172" y="23" key="#PHP" timestamp="1577098178605">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="172" y="23" key="#PHP/0.23.1680.1027@0.23.1680.1027" timestamp="1577098178605" />
+    <state x="654" y="393" key="ComposerInitDialogKey" timestamp="1577101739661">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="654" y="393" key="ComposerInitDialogKey/0.23.1680.1027@0.23.1680.1027" timestamp="1577101739661" />
+    <state width="1460" height="232" key="GridCell.Tab.0.bottom" timestamp="1577101799437">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1460" height="232" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1577101799437" />
+    <state width="1460" height="232" key="GridCell.Tab.0.center" timestamp="1577101799436">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1460" height="232" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1577101799436" />
+    <state width="1460" height="232" key="GridCell.Tab.0.left" timestamp="1577101799435">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1460" height="232" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1577101799435" />
+    <state width="1460" height="232" key="GridCell.Tab.0.right" timestamp="1577101799436">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1460" height="232" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1577101799436" />
+    <state x="385" y="93" key="SettingsEditor" timestamp="1577101749359">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="385" y="93" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1577101749359" />
+    <state x="507" y="306" key="cloudConfig.PluginsDialog" timestamp="1577096227610">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="507" y="306" key="cloudConfig.PluginsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1577096227610" />
+    <state x="574" y="222" width="792" height="564" key="find.popup" timestamp="1576783470451">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="574" y="222" width="792" height="564" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576783470451" />
+    <state x="594" y="23" width="838" height="1027" key="search.everywhere.popup" timestamp="1577109186187">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="594" y="23" width="838" height="1027" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1577109186187" />
+  </component>
+  <component name="WordPressConfiguration" enabled="true">
+    <wordpressPath>$PROJECT_DIR$/../../../../../Work/wpcached</wordpressPath>
+  </component>
+</project>

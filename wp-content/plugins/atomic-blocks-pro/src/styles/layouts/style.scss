@@ -1,0 +1,182 @@
+.ab-section-numbers {
+	@media only screen and (min-width: 600px) {
+		.ab-number-size {
+			font-size: 42px;
+		}
+	}
+}
+
+.ab-section-profile-columns {
+	.ab-block-profile {
+		padding: 0;
+	}
+
+	.ab-profile-column {
+		padding: 0;
+	}
+
+	@media only screen and (min-width: 600px) {
+		.ab-profile-column,
+		.ab-profile-avatar-wrap {
+			flex: 1;
+		}
+
+		.ab-profile-avatar-wrap {
+			padding-right: 6%;
+		}
+
+		.ab-profile-content-wrap {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+	}
+
+	@media only screen and (max-width: 600px) {
+		.ab-profile-avatar-wrap {
+			margin-bottom: 5%;
+		}
+	}
+
+	.ab-social-links,
+	.ab-profile-title,
+	.ab-profile-name,
+	.ab-profile-text {
+		width: 100%;
+	}
+}
+
+.ab-section-profile-header {
+	.ab-block-profile {
+		padding: 0;
+	}
+	.ab-block-profile .ab-profile-avatar-wrap,
+	.ab-block-profile .ab-profile-column {
+		flex: 0 0 100%;
+	}
+	.ab-profile-image-wrap {
+		max-width: 220px;
+	}
+	.center .ab-profile-image-wrap {
+		margin: 0 auto;
+	}
+	.right {
+		.ab-profile-image-wrap {
+			float: right;
+		}
+		.ab-profile-avatar-wrap {
+			order: 1;
+		}
+		.ab-profile-content-wrap {
+			order: 2;
+		}
+	}
+	.ab-block-cta {
+		.ab-cta-content {
+			max-width: 700px;
+			margin: 0 auto;
+		}
+
+		.ab-button {
+			font-weight: normal;
+		}
+	}
+}
+
+.ab-section-header-newsletter {
+	@media only screen and (min-width: 600px) {
+		.ab-section-font-override {
+			font-size: 42px;
+		}
+	}
+}
+
+.ab-section-icon-mini-card {
+	@media only screen and (min-width: 600px) {
+		.ab-2-col-wideright > .ab-layout-column-wrap {
+			grid-template-columns: 1fr 5fr;
+		}
+	}
+
+	@media only screen and (max-width: 600px) {
+		.ab-block-layout-column:first-child {
+			.wp-block-image {
+				max-width: 100px;
+			}
+		}
+	}
+
+	p {
+		margin-bottom: 15px;
+	}
+}
+
+.ab-section-device-4 {
+	overflow: hidden;
+
+	.ab-device-tablet {
+		margin-bottom: -2em;
+	}
+}
+
+.ab-layout-food-featured {
+	.ab-block-post-grid .is-list article {
+		@media only screen and (min-width: 600px) {
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 0 3em;
+		}
+	}
+
+	.ab-block-post-grid-text {
+		align-self: center;
+	}
+}
+
+.ab-layout-travel-sidebar-profile {
+	padding: 0;
+
+	.ab-profile-column {
+		flex: 100%;
+		padding-top: 0;
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+
+.ab-layout-profile-newsletter {
+	.ab-layout-modify-margin {
+		margin: 0;
+	}
+}
+
+.ab-layout-musician {
+	@media only screen and (min-width: 600px) {
+		.ab-section-font-override {
+			font-size: 42px;
+		}
+	}
+}
+
+.ab-layout-musician {
+	@media only screen and (min-width: 600px) {
+		.ab-section-font-override {
+			font-size: 42px;
+		}
+	}
+
+	.wp-block-table {
+		tr {
+			background: none;
+		}
+	}
+}
+
+.ab-layout-cafe {
+	.wp-block-table {
+		tr {
+			background: none;
+		}
+	}
+}

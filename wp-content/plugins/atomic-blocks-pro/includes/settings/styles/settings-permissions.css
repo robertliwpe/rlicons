@@ -1,0 +1,186 @@
+.ab-control-settings {
+    margin: 0;
+    font-size: 20px;
+    border: solid 1px #e5e4e6;
+}
+
+.ab-control-settings-head {
+    background: #3f446f;
+    color: #fff;
+    font-weight: bold;
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ab-control-settings-head > div {
+    padding: 21px 25px;
+}
+
+.ab-control-settings-head div:last-child {
+    text-align: right;
+}
+
+.ab-control-settings-expand-all:hover,
+.ab-control-settings-collapse-all:hover {
+    cursor: pointer;
+    color: #ddd;
+}
+
+.ab-control-settings-expand-all {
+    display: block;
+}
+
+.ab-control-settings-expand-all.ab-hidden {
+    display: none;
+}
+
+.ab-control-settings-collapse-all {
+    display: none;
+}
+
+.ab-control-settings-collapse-all.ab-visible {
+    display: block;
+}
+
+.ab-control-settings-entry {
+    border-top: solid 1px #ddd;
+}
+
+.ab-control-settings-block-open + .ab-control-settings-block-open {
+    border-top: solid 1px #ccc;
+}
+
+.ab-control-settings-entry-header span {
+    display: none;
+}
+
+.ab-control-settings-block-open .ab-control-settings-entry-header span {
+    display: block;
+}
+
+.ab-control-settings-entry:hover {
+    background: #f7f7f9;
+}
+
+.ab-control-settings-entry:first-child {
+    border-top: none;
+}
+
+.ab-control-settings-block {
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ab-control-settings-block-open .ab-control-settings-block {
+    background: #edeaf1;
+
+}
+
+.ab-control-settings-block > div {
+    padding: 25px;
+}
+
+.ab-control-settings-block-toggle {
+    text-align: right;
+}
+
+.ab-control-settings-control-settings {
+    background: #edeaf1;
+    padding: 25px;
+    display: none;
+}
+
+.ab-control-settings-control-settings-open {
+    display: block;
+}
+
+.ab-control-settings-control-settings-entry {
+    background: #fff;
+    border-bottom: solid 1px #ddd;
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    z-index: 5;
+    position: relative;
+    transition: .2s ease;
+}
+
+.ab-control-settings-control-settings-entry > div {
+    padding: 25px;
+}
+
+.ab-control-settings-control-settings-entry:last-child {
+    border-bottom: none;
+}
+
+.ab-control-settings-control-settings-entry:hover {
+    background: #f7f7f9;
+}
+
+.ab-control-settings-block-toggle:hover {
+    cursor: pointer;
+}
+
+.ab-control-settings-entry-open .ab-control-settings-block-permission fieldset {
+    display: block;
+}
+
+.ab-control-settings-control-settings-entry div:last-child {
+    text-align: right;
+    font-size: 14px;
+}
+
+.ab-control-settings-block-permission {
+    z-index: 10;
+    position: relative;
+    padding-left: 10px;
+}
+
+.ab-control-settings-control-settings-entry:not(.ab-control-settings-entry-open) .ab-control-settings-block-permission {
+    pointer-events: none;
+}
+
+.ab-control-settings-block-permission fieldset {
+    display: none;
+}
+
+.ab-control-settings-block-permission label {
+    padding: 8px 0;
+    display: inline-block;
+    width: 100%;
+    z-index: 40;
+    position: relative;
+}
+
+.ab-control-settings-block-permission input {
+    margin-right: 8px;
+}
+
+.ab-getting-started p.atomic-blocks-settings-description {
+    margin: 5px 0;
+    color: #666;
+    font-size: 16px;
+    font-style: italic;
+}
+
+label[for="atomic-blocks-settings[analytics-opt-in]"] {
+    vertical-align: baseline;
+}
+
+label[for="atomic-blocks-settings[analytics-opt-in]"],
+#atomic-blocks-settings[analytics-opt-in] {
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.atomic-blocks-analytics-form-table {
+    border-top: dotted 1px #ccc;
+    margin-top: 10px;
+    padding-top: 20px;
+    display: block;
+}
