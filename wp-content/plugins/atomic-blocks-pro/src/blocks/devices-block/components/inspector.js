@@ -5,7 +5,7 @@
 /**
  * Internal dependencies
  */
-import BackgroundImagePanel from '../../../../../atomic-blocks/src/utils/components/background-image/inspector';
+import BackgroundImagePanel from '../../../../lib/atomic-blocks/src/utils/components/background-image/inspector';
 
 /* Setup the block */
 const { __ } = wp.i18n;

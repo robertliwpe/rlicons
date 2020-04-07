@@ -1,3 +1,56 @@
+= 7.28.0 (2020.04.06) =
+- Added user account information to the settings page
+- Added Covid-19 information banner
+
+= 7.27.48 (2020.04.01) =
+- Disable review notice
+
+= 7.27.47 (2020.03.30) =
+- Define a new way to update changelog
+- Updated translations
+- Code cleanup
+    - remove unused variables
+    - fixed linting
+
+= 7.26.18 (2020.03.16) =
+- Fix login screen when not authenticated
+
+= 7.25.2 (2020.03.11) =
+- Rename configuration files
+
+= 7.24.8 (2020.03.10) =
+- Create iframe on javascript rather than PHP.
+
+= 7.23.0 (2020.03.02) =
+- Update acceptance tests
+- Update translations files
+
+= 7.22.6 (2020.03.02) =
+- Update iframe static version
+
+= 7.21.22 (2020.02.28) =
+- Fix broken CTAs
+- Load iframe after the page is loaded
+
+= 7.20.13 (2020.02.24) =
+- Add missing translations
+- Update author’s URL
+- Fix getting started page not loading
+
+= 7.19.146 (2020.02.19) =
+- New getting started page
+- Update forms builder to not open full screen
+- Fix broken login screen when not authenticated
+- Create new settings page
+- Improve connection flow and fix known bugs
+- Refactor code into classes
+
+= 7.18.81 (2020.01.15) =
+- Make the usage of the plugin API consistent from the UI and setup CORS
+- Setup Autoloader on the PHP code
+- Refactor the PHP section of the plugin and use of namespaces
+- Refactor and update the inteframe communication library
+
 = 7.17.2 (2019.11.13) =
 - Fix missing disconnect button
 
@@ -18,7 +71,7 @@
 - Fix navbar showing on the form pag
 
 = 7.13.11 (2019.10.10) =
-
+- Automatic connection when only one portal is available
 
 = 7.12.14 (2019.09.26) =
 - Add new forms dashboard
@@ -325,11 +378,9 @@ servers
 - Fixed signup error in PHP < 5.4 on browsers that don't support CORS
 
 = 4.0.0 (2015.05.20) =
-
 - Leadin Cloud launched
 
 = 3.1.8 (2015.05.15) =
-
 - Added email connector sync to onboarding
 - Sources now check the UTM tags on the first page view visit
 - Privacy policy added to plugin
@@ -421,11 +472,9 @@ servers
 - Jumping to version 3.0.0 to indefinitely override repository version of Leadin
 
 = Leadin 2.2.7 - 2.2.11 =
-
 *Leadin was split into Leadin and <a href="http://leadin.com/pro-upgrade" target="_blank">Leadin Pro</a> after version 2.2.6 and later merged back together, so versions 2.2.7 - 2.2.11 and 3.0.0 - 3.1.3 share similar updates.*
 
 = 2.2.11 (2015.02.18) =
-
 = Enhancements =
 - Don't show the "You should receive a confirmation email shortly" message in the popup thank you if the confirmation email setting is toggled off
 
@@ -721,7 +770,6 @@ servers
 - SVN bug fix that did not add the MailChimp List sync power-up
 
 = 0.7.0 (2014.04.10) =
-
 = Enhancements =
 - MailChimp List Sync power-up
 - Added new themes (bottom right, bottom left, top and pop-up) to the WordPress Subscribe Widget power-up

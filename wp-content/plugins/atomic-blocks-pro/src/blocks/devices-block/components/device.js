@@ -7,8 +7,8 @@ const { Component } = wp.element;
 
 /* Import block dependencies and components */
 import classnames from 'classnames';
-import BackgroundImageClasses from '../../../../../atomic-blocks/src/utils/components/background-image/classes';
-import BackgroundImageStyles from '../../../../../atomic-blocks/src/utils/components/background-image/styles';
+import BackgroundImageClasses from '../../../../lib/atomic-blocks/src/utils/components/background-image/classes';
+import BackgroundImageStyles from '../../../../lib/atomic-blocks/src/utils/components/background-image/styles';
 import defaultAttributes from './attributes';
 
 /* Create a Device wrapper Component */

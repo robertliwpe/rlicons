@@ -20,3 +20,6 @@ deploy.sh
 *scripts*
 *tests*
 *vendor*
+*composer.json*
+*composer.lock*
+*package-lock.json*

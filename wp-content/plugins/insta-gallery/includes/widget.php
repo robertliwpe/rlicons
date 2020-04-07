@@ -1,6 +1,4 @@
 <?php
-if (!defined('ABSPATH'))
-  exit;
 
 class QLIGG_Widget extends WP_Widget {
 
@@ -36,28 +34,33 @@ class QLIGG_Widget extends WP_Widget {
 
     $title = $instance['title'];
     $instagal_id = $instance['instagal_id'];
-    $instagram_feeds = get_option('insta_gallery_items', array());
+
+    include_once(QLIGG_PLUGIN_DIR . 'includes/models/Feed.php');
+
+    $feed_model = new QLIGG_Feed();
+
+    $feeds = $feed_model->get_feeds();
     ?>
     <p>
       <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_html_e('Title', 'insta-gallery'); ?>: <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label>
     </p>
-    <?php if (!empty($instagram_feeds) && is_array($instagram_feeds)): ?>
+    <?php if (!empty($feeds) && is_array($feeds)): ?>
       <p>
-        <label for="<?php echo esc_attr($this->get_field_id('instagal_id')); ?>"><?php esc_html_e('Select your Instagram gallery', 'insta-gallery'); ?>: </label> <select
-          id="<?php echo esc_attr($this->get_field_id('instagal_id')); ?>" name="<?php echo esc_attr($this->get_field_name('instagal_id')); ?>" class="widefat">
-            <?php
-            foreach ($instagram_feeds as $id => $instagram_feed) {
+        <label for="<?php echo esc_attr($this->get_field_id('instagal_id')); ?>"><?php esc_html_e('Select your Instagram gallery', 'insta-gallery'); ?>:</label> 
+        <select id="<?php echo esc_attr($this->get_field_id('instagal_id')); ?>" name="<?php echo esc_attr($this->get_field_name('instagal_id')); ?>" class="widefat">
+          <?php
+          foreach ($feeds as $id => $feed) {
 
-              if (isset($instagram_feed['insta_source'])) {
-                if ($instagram_feed['insta_source'] == 'username') {
-                  $profile_info = qligg_get_user_profile($instagram_feed['insta_username']);
-                } else {
-                  $profile_info = qligg_get_tag_profile($instagram_feed['insta_tag']);
-                }
+            if (isset($feed['type'])) {
+              if ($feed['type'] == 'username') {
+                $profile_info = qligg_get_user_profile($feed['username']);
+              } else {
+                $profile_info = qligg_get_tag_profile($feed['tag']);
               }
+            }
 
-              $label = sprintf('%s: %s', sprintf(esc_html__('Feed %s', 'insta-gallery'), $id), $profile_info['name']);
-              ?>		
+            $label = sprintf('%s : %s', sprintf(esc_html__('Feed %s', 'insta-gallery'), $id), $profile_info['name']);
+            ?>		
             <option value="<?php echo esc_html($id); ?>" <?php selected($id, $instagal_id) ?>><?php echo esc_html($label); ?></option>
           <?php } ?>
         </select>

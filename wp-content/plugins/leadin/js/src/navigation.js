@@ -1,32 +1,7 @@
 import $ from 'jquery';
 
 import { domElements } from './constants/selectors';
-import { changeRoute } from './api/hubspotPluginApi';
 import urlsMap from './constants/urlsMap';
-
-export function initNavigation() {
-  function setSelectedMenuItem() {
-    $(domElements.subMenuButtons).removeClass('current');
-    const pageParam = window.location.search.match(/\?page=leadin_?\w*/)[0]; // filter page query param
-    const selectedElement = $(`a[href="admin.php${pageParam}"]`);
-    selectedElement.parent().addClass('current');
-  }
-
-  function handleNavigation() {
-    let appRoute = window.location.search.match(/page=leadin_?(\w*)/)[1];
-
-    // prefix route with /
-    if (appRoute) {
-      appRoute = `/${appRoute}`;
-    }
-
-    changeRoute(appRoute);
-    setSelectedMenuItem();
-  }
-
-  // Browser back and forward events navigation
-  window.addEventListener('popstate', handleNavigation);
-}
 
 // Given a route like "/settings/forms", parse it into "?page=leadin_settings&leadin_route[0]=forms"
 export function syncRoute(path = '') {
@@ -35,6 +10,7 @@ export function syncRoute(path = '') {
   );
   let wpPage;
   let route;
+
   baseUrls.some(basePath => {
     if (path.indexOf(basePath) === 0) {
       wpPage = urlsMap[basePath];
@@ -61,3 +37,10 @@ export function syncRoute(path = '') {
 export function disableNavigation() {
   $(domElements.allMenuButtons).off('click');
 }
+
+export const leadinPageReload = () => window.location.reload(true);
+
+export const leadinPageRedirect = path => {
+  syncRoute(path);
+  leadinPageReload();
+};

@@ -3,7 +3,7 @@
  */
 import Inspector from './inspector';
 import Device from './device';
-import icons from '../../../../../atomic-blocks/src/utils/components/icons';
+import icons from '../../../../lib/atomic-blocks/src/utils/components/icons';
 
 /**
  * WordPress dependencies

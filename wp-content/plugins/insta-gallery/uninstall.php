@@ -10,6 +10,7 @@ if (!is_multisite()) {
     delete_option('insta_gallery_settings');
     delete_option('insta_gallery_setting');
     delete_option('insta_gallery_items');
+    delete_option('insta_gallery_feeds');
     delete_option('insta_gallery_token');
     delete_option('insta_gallery_iac');
   }

@@ -126,7 +126,7 @@ if (!class_exists('QLIGG_API')) {
 
             preg_match_all("/#(\\w+)/", @$item['caption']['text'], $hashtags);
 
-            $test = $instagram_items[] = array(
+            $instagram_items[] = array(
                 'i' => $i,
                 'id' => str_replace("_{$item['user']['id']}", '', $item['id']),
                 'images' => array(

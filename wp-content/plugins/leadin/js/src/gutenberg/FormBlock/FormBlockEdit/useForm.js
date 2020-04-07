@@ -10,10 +10,15 @@ export default function useForm(id) {
       setForm(null);
       setLoading(false);
     } else {
-      getForm(id).then(response => {
-        setForm(response);
-        setLoading(false);
-      });
+      getForm(id)
+        .then(response => {
+          setForm(response);
+          setLoading(false);
+        })
+        .catch(error => {
+          setLoading(false);
+          console.error(error);
+        });
     }
   }, [id]);
 

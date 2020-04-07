@@ -1,4 +1,4 @@
-import BackgroundAttributes from '../../../../../atomic-blocks/src/utils/components/background-image/attributes';
+import BackgroundAttributes from '../../../../lib/atomic-blocks/src/utils/components/background-image/attributes';
 
 const blockAttributes = {
 	...BackgroundAttributes,

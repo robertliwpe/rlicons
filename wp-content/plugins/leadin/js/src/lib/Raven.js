@@ -23,7 +23,7 @@ export function configureRaven() {
   ).install();
 
   Raven.setTagsContext({
-    leadin: leadinPluginVersion,
+    v: leadinPluginVersion,
     php: phpVersion,
     wordpress: wpVersion,
   });

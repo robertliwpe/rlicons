@@ -1,38 +1,50 @@
-=== Social Feed Gallery ===
-Contributors: quadlayers
+﻿=== Social Feed Gallery ===
+Contributors: quadlayers, instagram
 Donate link: https://quadlayers.com/portfolio/instagram-gallery/
-Tags: instagram, instagram feed, instagram widget, instagram gallery, instagram pictures, gallery widget, pictures, carousel slider, image gallery, image slider
-Requires at least: 4.6
-Tested up to: 5.3.2
-Stable tag: 2.6.5
+Tags: instagram, instagram feed, instagram gallery, instagram photos, instagram widget, instagram pictures, gallery widget, pictures, carousel slider, image gallery, image slider
+Requires at least: 3.4
+Tested up to: 5.4.0
+Stable tag: 2.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Instagram Feed Gallery is an easy way to display your Instagram feed pictures in your website.
+Instagram Feed Gallery helps to display your Instagram feed pictures in your website.
+
+== Presentation ==
+
+[Premium](https://quadlayers.com/portfolio/wordpress-instagram-feed/) | [Demo](https://quadlayers.com/instagram-feed/) | [Documentation](https://quadlayers.com/documentation/instagram-feed-gallery/) | [Community](https://www.facebook.com/groups/quadlayers/)
+
+We are glad to present a plugin that helps to integrate  <b>Instagram feed <b> from @ids or #tags inside your Wordpress site. Giving the possibility to  <b>customize the layout of the display <b>, choosing from gallery or carousel for free version. Adding masonry or highlight alternatives for premium version.
+While allowing to <b>set the appearance of display's boxes, images & backgrounds, masks and buttons<b>.
+
+== Highlights ==
+
+* Simplicity: Easy to sync up and configure how to display images from your Instagram account.
+* Keep on track: site update is automated. Caching Images and testimonial data from Instagram.
+* API use optimized: include <b>features to cache data<b>, to minimize the requests and reduce loading time.
+* Pop-up box: customizable lightbox to allow users to see your content at your own site.
+* Customization options: alternatives to change appearance, positioning and layout of your Instagram feed.
 
 == Description ==
 
-[Premium](https://quadlayers.com/portfolio/wordpress-instagram-feed/) | [Demo](https://quadlayers.com/instagram-feed/) | [Community](https://www.facebook.com/groups/quadlayers/)
-
-Instagram Feed Gallery is the most user-friendly Instagram plugin for Wordpress. It allows you to showcase your Instagram feed or Instagram tags on your website.
-
-This Instagram Gallery plugin offers you two different layouts to display your feeds, a grid gallery or a carousel slider. It also lets you create hashtags feeds, a feature that is usually available only the premium versions of other plugins.
+Instagram Feed Gallery is the most  <b>user-friendly Instagram plugin for Wordpress <b>. It was built to simplify the integration, to reduce time to have sites updated and to be on track with social media that shows best growing indicators.
 
 == Formerly Instagram Feed Gallery ==
 
-This plugin was formerly known as "Instagram Feed Gallery". WordPress forced us on August 8, 2019 to change the name of the plugin due to use of the "Instagram" word in the name. We apologize for the problems that the downtime may have caused to you.
+This plugin was formerly known as "Instagram Feed Gallery". WordPress forced us on August 8, 2019 to change the name of the plugin due to use of the "Instagram" as part of the name. We apologize for the problems that could be caused to you, due the downtime.
 
 == Instagram Token setup ==
 
-Unlike other plugins that require creating an app with the developer tools, our Instagram Feed plugin offers you a one-click setup. 
+Instagram Feed plugin offers you a one-click setup. Discarding the requirement to create any app to do this link, like other plugins do. 
 
-All you need to display your Instagram user or hashtags pictures is clicking on the "Add New Account" button and your Instagram access token will be automatically generated and saved.
+All you need is to do is add your credentials, and then select an Instagram @id or #tags pictures, by clicking on the "Add New Account" button and your Instagram access token will be automatically generated and saved.
 
-== Instagram Premium ==
+== Instagram feed gallery Premium ==
 
-Instagram Feed Gallery is a freemium plugin which allows you to include an unlimited number of user accounts and then create a separate feed for each of them. 
+Instagram Feed Gallery is a freemium plugin which allows you to include an unlimited number of user accounts and then create a separate feed for each one. 
 
-It also includes two extra layouts and offers a lot of customization options like a ‘Load More’ button, a box mode for the feed with colors and borders, the option to display the user profile avatar image, username and custom description and a lot more.
+It also includes two extra layouts and offers a lot of customization options like a â€˜Load Moreâ€™ button, a box mode for the feed with colors and borders, the option to display the user profile avatar image, username and custom description and many more.
+
 ####Pro Features:
 
 > * Multiple Instagram User Accounts
@@ -46,6 +58,8 @@ It also includes two extra layouts and offers a lot of customization options lik
 > * Display image likes inside Instagram Pictures popup
 > * Change Instagram Pictures popup description position
 > * Load more button
+
+Further information of configuration possibilities at [Documentation](https://quadlayers.com/documentation/instagram-feed-gallery/)
 
 
 == Frequently Asked Questions ==
@@ -91,6 +105,15 @@ There may be some other plugins(like: fancybox, elementor) which also uses image
 
 == Changelog ==
 
+= 2.7.1 =
+* Fix. instagram premium compatibility
+
+= 2.7.0 =
+* Fix. instagram refactoring
+
+= 2.6.6 =
+* Fix. instagram photo enhance
+
 = 2.6.5 =
 * Fix. instagram gallery actions
 
@@ -128,7 +151,7 @@ There may be some other plugins(like: fancybox, elementor) which also uses image
 * Fix. Instagram Feed Gallery card date
 
 = 2.5.3 =
-* Improvement. Instagram Account disconnet alert
+* Improvement. Instagram Account disconnect alert
 * Improvement. Instagram Feeds clear feeds cache button
 
 = 2.5.2 =
@@ -244,7 +267,7 @@ There may be some other plugins(like: fancybox, elementor) which also uses image
 * Fix. Instagram gallery image alignment
 
 = 2.1.4 =
-* Fix. Instagram thumbnail imagessizes updated
+* Fix. Instagram thumbnail images sizes updated
 
 = 2.1.3 =
 * Fix. Code bug
@@ -274,7 +297,7 @@ There may be some other plugins(like: fancybox, elementor) which also uses image
 
 = 1.6.2 =
 * Fix. Elementor confliction fixed
-* Fix. code optimised
+* Fix. code optimized
 * Fix. IE 8,9 Carousel support dropped
 
 = 1.6.1 =
@@ -304,8 +327,8 @@ There may be some other plugins(like: fancybox, elementor) which also uses image
 
 = 1.5.5 =
 * Fix. Carousel autoplay toggle
-* Fix. dashicons removed
-* Fix. assets minified
+* Fix. Dash icons removed
+* Fix. Assets minified
 
 = 1.5.4 =
 * Fix. API update for Tags fixed
@@ -319,7 +342,7 @@ There may be some other plugins(like: fancybox, elementor) which also uses image
 = 1.5.1 =
 * Fix. Gallery widget added
 * Fix. Transients support added
-* Fix. template customisation added
+* Fix. Template customization added
 * Fix. code updated for better performance
 
 = 1.4.6 =

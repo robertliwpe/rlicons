@@ -1,7 +1,7 @@
 <div class="insta-gallery-image-wrap">
   <a class="insta-gallery-link" href="<?php echo esc_url($item['link']); ?>" target="_blank">
     <img alt="Instagram" class="insta-gallery-image" src="<?php echo esc_url($image); ?>"/>
-    <?php if ($instagram_feed['hover']): ?>
+    <?php if ($feed['mask']['display']): ?>
       <?php include($this->template_path('item/item-image-mask.php')); ?>
     <?php endif; ?>
   </a>

@@ -3,7 +3,7 @@
  * Plugin Name: Atomic Blocks Pro
  * Plugin URI: https://atomicblocks.com/
  * Description: Atomic Blocks Pro enables you to create beautiful and effective content faster with block-based page-building tools.
- * Version: 1.1.1-beta
+ * Version: 1.3.0-beta
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  *
@@ -18,6 +18,46 @@ namespace AtomicBlocksPro;
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+/**
+ * Initialize Atomic Blocks Free
+ */
+function atomic_blocks_free_loader() {
+
+	$lib_path         = plugin_dir_path( __FILE__ ) . 'lib/';
+	$ab_pre_installed = function_exists( 'atomic_blocks_main_plugin_file' );
+	$ab_lib_exists    = file_exists( $lib_path . 'atomic-blocks/atomicblocks.php' );
+
+	/**
+	 * Check to see if Atomic Blocks is already installed from wordpress.org.
+	 * If it is, deactivate it and trigger this loader to run again
+	 * to load Atomic Blocks from lib/atomic-blocks.
+	 */
+	if ( $ab_lib_exists && $ab_pre_installed ) {
+		add_action(
+			'plugins_loaded',
+			function() {
+				require_once ABSPATH . 'wp-admin/includes/plugin.php';
+				\deactivate_plugins( \plugin_basename( atomic_blocks_main_plugin_file() ) );
+				add_action( 'plugins_loaded', __NAMESPACE__ . '\atomic_blocks_free_loader', 11 );
+			}
+		);
+	}
+
+	if ( $ab_lib_exists && ! $ab_pre_installed ) {
+		require_once $lib_path . 'atomic-blocks/atomicblocks.php';
+	}
+
+	/**
+	 * For some reason, Atomic Blocks was not bundled in lib/atomic-blocks.
+	 * Show an admin notice for a graceful fallback.
+	 */
+	if ( ! $ab_lib_exists ) {
+		add_action( 'admin_notices', __NAMESPACE__ . '\do_missing_ab_lib_notice' );
+	}
+
+}
+add_action( 'plugins_loaded', __NAMESPACE__ . '\atomic_blocks_free_loader', 1 );
 
 /**
  * Returns the full path and filename of the main Atomic Blocks Pro plugin file.
@@ -45,6 +85,7 @@ function plugin_loader() {
 	require_once $includes_dir . 'settings/pages/block-settings-permissions.php';
 	require_once $includes_dir . 'permissions/block-settings.php';
 	require_once $includes_dir . 'settings/pages/analytics.php';
+	require_once $includes_dir . '../src/blocks/portfolio/index.php';
 
 	add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\settings_page_assets', 20 );
 	add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\permissions_assets', 20 );
@@ -78,7 +119,7 @@ function editor_assets() {
 	wp_enqueue_style(
 		'atomic-blocks-pro-editor-styles',
 		plugins_url( '/build/editor.styles.build.css', __FILE__ ),
-		[ 'wp-edit-blocks' ],
+		array( 'wp-edit-blocks' ),
 		filemtime( plugin_dir_path( __FILE__ ) . 'build/editor.styles.build.css' )
 	);
 }
@@ -91,7 +132,7 @@ function frontend_assets() {
 	wp_enqueue_style(
 		'atomic-blocks-pro-frontend-styles',
 		plugins_url( '/build/frontend.styles.build.css', __FILE__ ),
-		[],
+		array(),
 		filemtime( plugin_dir_path( __FILE__ ) . 'build/frontend.styles.build.css' )
 	);
 }
@@ -130,7 +171,7 @@ function settings_page_assets() {
 	wp_enqueue_style(
 		'atomic-blocks-pro-settings-page-styles',
 		plugins_url( '/includes/settings/styles/settings-permissions.css', __FILE__ ),
-		[],
+		array(),
 		filemtime( plugin_dir_path( __FILE__ ) . 'includes/settings/styles/settings-permissions.css' )
 	);
 }
@@ -142,7 +183,7 @@ function block_settings_permissions_assets() {
 	wp_enqueue_script(
 		'atomic-blocks-pro-block-settings-permissions-scripts',
 		plugins_url( '/build/settingsPermissions.js', __FILE__ ),
-		[],
+		array(),
 		filemtime( plugin_dir_path( __FILE__ ) . 'build/settingsPermissions.js' ),
 		true
 	);
@@ -157,7 +198,7 @@ function permissions_assets() {
 	wp_enqueue_script(
 		'atomic-blocks-pro-settings-page-scripts',
 		plugins_url( '/build/settingsPage.js', __FILE__ ),
-		[],
+		array(),
 		filemtime( plugin_dir_path( __FILE__ ) . 'build/settingsPage.js' ),
 		true
 	);
@@ -165,9 +206,20 @@ function permissions_assets() {
 	wp_localize_script(
 		'atomic-blocks-pro-settings-page-scripts',
 		'atomic_blocks_pro_globals',
-		[
+		array(
 			'blockSettingsPermissions' => \AtomicBlocksPro\Permissions\block_settings_permissions(),
 			'allRoles'                 => get_editable_roles(),
-		]
+		)
 	);
+}
+
+/**
+ * Displays a notice if Atomic Blocks is missing
+ * from the lib/atomic-blocks directory.
+ * Runs on admin_notices hook.
+ *
+ * @see plugin_loader()
+ */
+function do_missing_ab_lib_notice() {
+	printf( '<div class="error"><p>%s</p></div>', esc_html__( 'The Atomic Blocks library is missing. Please download and install Atomic Blocks Pro again.', 'atomic-blocks-pro' ) );
 }

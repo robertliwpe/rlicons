@@ -180,3 +180,66 @@
 		}
 	}
 }
+
+.ab-layout-team-round-avatar {
+	.ab-block-profile .ab-profile-image-wrap {
+		background: none;
+	}
+	.ab-profile-image-square img {
+		border-radius: 250px;
+	}
+}
+
+.ab_pro_section_portfolio3__2020_2_24 {
+
+	.ab-portfolio-grid-item {
+		@media only screen and (min-width: 600px) {
+			display: -ms-grid;
+			display: grid;
+			grid-gap: 0;
+			-ms-grid-columns: 1fr 1fr;
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: "col1 col2";
+		}
+	 }
+
+	.ab-block-post-grid-image {
+		@media only screen and (min-width: 600px) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 1;
+			grid-area: col1;
+		}
+	}
+
+	.ab-block-post-grid-image {
+		margin-bottom: 0;
+	}
+
+	.ab-block-post-grid-text {
+		padding: 40px;
+		background: #fff;
+		z-index: 5;
+
+		@media only screen and (min-width: 600px) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 1;
+			grid-area: col2;
+			align-self: center;
+			margin-left: -50px;
+		}
+	}
+ }
+
+ .ab-layout-team-columns {
+	 .wp-block-atomic-blocks-ab-columns:not(:first-child) {
+		margin-top: 3%;
+	 }
+
+	 .ab-layout-team-columns-name {
+		margin-bottom: 0;
+	 }
+
+	 .ab-layout-team-columns-title {
+		margin-bottom: 15px;
+	 }
+ }
